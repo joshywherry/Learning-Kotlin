@@ -27,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     Column {
                         Modifier.padding(20.dp)
                         Hello()
-                        Spacer(Modifier.height(10.dp))
+                        Spacer(Modifier.height(5.dp))
                         CardContainer()
                     }
                 }
