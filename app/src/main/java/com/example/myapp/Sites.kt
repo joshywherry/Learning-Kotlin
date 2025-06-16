@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun Sites(){
     Row (
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -48,7 +48,7 @@ fun Sites(){
 
     }
     Row (
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -70,7 +70,7 @@ fun Sites(){
 
     }
     Row (
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp))
             .fillMaxWidth(),
@@ -93,7 +93,7 @@ fun Sites(){
 
     }
     Row (
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -115,7 +115,7 @@ fun Sites(){
 
     }
     Row (
-        modifier = Modifier.padding(5.dp)
+        modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically

@@ -31,13 +31,16 @@ class MainActivity : ComponentActivity() {
             MyAppTheme {
                 Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
                     Modifier.padding(innerPadding)
-                    Column (Modifier.padding(20.dp)) {
+                    Column  {
 
                         Navigation()
                         Spacer(Modifier.height(20.dp))
                         Shops()
                         Spacer(Modifier.height(20.dp))
                         Sites()
+                        Spacer(Modifier.height(20.dp))
+                        Dashboard()
+
 
 
 
