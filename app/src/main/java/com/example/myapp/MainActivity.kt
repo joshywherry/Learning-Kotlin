@@ -36,6 +36,7 @@ class MainActivity : ComponentActivity() {
                         Navigation()
                         Spacer(Modifier.height(20.dp))
                         Shops()
+                        Spacer(Modifier.height(20.dp))
                         Sites()
 
 
