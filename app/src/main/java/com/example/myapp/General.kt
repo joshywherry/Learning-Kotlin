@@ -1,7 +1,10 @@
 package com.example.myapp
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -19,11 +22,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.ui.platform.LocalContext
+
 
 @Composable
 fun GeneralShops(){
+    val context = LocalContext.current
     Row (
-        modifier = Modifier.padding(10.dp)
+        modifier = Modifier
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amazon.com"))
+                context.startActivity(intent)
+            }
+        .padding(10.dp)
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -46,6 +57,10 @@ fun GeneralShops(){
     }
     Row (
         modifier = Modifier.padding(10.dp)
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.kilimall.co.ke"))
+                context.startActivity(intent)
+            }
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -68,6 +83,10 @@ fun GeneralShops(){
     }
     Row (
         modifier = Modifier.padding(10.dp)
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.jiji.co.ke"))
+                context.startActivity(intent)
+            }
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp))
             .fillMaxWidth(),
@@ -91,6 +110,10 @@ fun GeneralShops(){
     }
     Row (
         modifier = Modifier.padding(10.dp)
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.alibaba.com"))
+                context.startActivity(intent)
+            }
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
@@ -113,6 +136,10 @@ fun GeneralShops(){
     }
     Row (
         modifier = Modifier.padding(10.dp)
+            .clickable {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.com"))
+                context.startActivity(intent)
+            }
             .fillMaxWidth()
             .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
         verticalAlignment = Alignment.CenterVertically
