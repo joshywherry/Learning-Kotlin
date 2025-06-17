@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Sites(){
+fun Fashion(){
     Row (
         modifier = Modifier.padding(10.dp)
             .fillMaxWidth()
@@ -32,17 +32,17 @@ fun Sites(){
         verticalAlignment = Alignment.CenterVertically
     ){
 
-       Image(
-           painter = painterResource(id = R.drawable.amazon),
-           contentDescription = "amazon logo",
-           modifier = Modifier.padding( 20.dp)
-               .size(70.dp)
-               .clip(RoundedCornerShape(15.dp))
-       )
+        Image(
+            painter = painterResource(id = R.drawable.hm),
+            contentDescription = "hm logo",
+            modifier = Modifier.padding( 20.dp)
+                .size(70.dp)
+                .clip(RoundedCornerShape(15.dp))
+        )
         Text(
 
             modifier = Modifier.padding(20.dp),
-            text = "Amazon",
+            text = "H & M",
             style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         )
 
@@ -55,8 +55,8 @@ fun Sites(){
     ){
 
         Image(
-            painter = painterResource(id = R.drawable.kilimall),
-            contentDescription = "amazon logo",
+            painter = painterResource(id = R.drawable.asos),
+            contentDescription = "asos logo",
             modifier = Modifier.padding( 20.dp)
                 .size(70.dp)
                 .clip(RoundedCornerShape(40.dp))
@@ -64,7 +64,7 @@ fun Sites(){
         Text(
 
             modifier = Modifier.padding(20.dp),
-            text = "Killimall",
+            text = "Asos",
             style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         )
 
@@ -78,8 +78,8 @@ fun Sites(){
     ){
 
         Image(
-            painter = painterResource(id = R.drawable.jiji),
-            contentDescription = "amazon logo",
+            painter = painterResource(id = R.drawable.zara),
+            contentDescription = "zara logo",
             modifier = Modifier.padding( 20.dp)
                 .size(70.dp)
                 .clip(RoundedCornerShape(15.dp))
@@ -87,7 +87,7 @@ fun Sites(){
         Text(
 
             modifier = Modifier.padding(20.dp),
-            text = "Jiji",
+            text = "Zara",
             style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         )
 
@@ -100,8 +100,8 @@ fun Sites(){
     ){
 
         Image(
-            painter = painterResource(id = R.drawable.alibaba),
-            contentDescription = "amazon logo",
+            painter = painterResource(id = R.drawable.shein),
+            contentDescription = "shein logo",
             modifier = Modifier.padding( 20.dp)
                 .size(70.dp)
                 .clip(RoundedCornerShape(15.dp))
@@ -109,7 +109,7 @@ fun Sites(){
         Text(
 
             modifier = Modifier.padding(20.dp),
-            text = "Alibaba",
+            text = "Shein",
             style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         )
 
@@ -122,18 +122,18 @@ fun Sites(){
     ){
 
         Image(
-            painter = painterResource(id = R.drawable.ebay),
-            contentDescription = "amazon logo",
+            painter = painterResource(id = R.drawable.boohoo),
+            contentDescription = "boohoo logo",
             modifier = Modifier.padding( 20.dp)
                 .size(70.dp)
                 .clip(RoundedCornerShape(15.dp))
         )
         Text(
             modifier = Modifier.padding(20.dp),
-            text = "Ebay",
+            text = "Bohoo",
             style = TextStyle(fontSize = 30.sp, color = Color(  0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         )
 
     }
-    }
+}
 

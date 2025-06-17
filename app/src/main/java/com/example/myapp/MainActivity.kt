@@ -36,8 +36,10 @@ class MainActivity : ComponentActivity() {
                         Navigation()
                         Spacer(Modifier.height(20.dp))
                         Shops()
+//                        Fashion()
                         Spacer(Modifier.height(20.dp))
-                        Sites()
+                        GeneralShops()
+//                        Others()
                         Spacer(Modifier.height(20.dp))
                         Dashboard()
 
