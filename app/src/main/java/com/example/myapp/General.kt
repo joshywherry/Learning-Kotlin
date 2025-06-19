@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,136 +30,64 @@ import androidx.compose.ui.platform.LocalContext
 @Composable
 fun GeneralShops(){
     val context = LocalContext.current
-    Row (
-        modifier = Modifier
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.amazon.com"))
-                context.startActivity(intent)
+
+    val sites= listOf(
+        Sites(
+            "Amazon",
+            R.drawable.amazon
+        ),
+
+        Sites(
+            "Jiji",
+            R.drawable.jiji
+        ),
+        Sites(
+            "Jumia",
+            R.drawable.jumia
+        ),
+        Sites(
+            "Kilimall",
+            R.drawable.kilimall
+        ),
+
+    )
+
+
+    LazyColumn {
+        itemsIndexed(sites) { index, site ->
+            Row (
+                modifier = Modifier
+                    .padding(10.dp)
+                    .clickable {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.com"))
+                        context.startActivity(intent)
+                    }
+                    .fillMaxWidth()
+                    .border(width = 1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
+                verticalAlignment = Alignment.CenterVertically
+            ){
+
+                Image(
+                    painter = painterResource(id = site.image),
+                    contentDescription = "amazon logo",
+                    modifier = Modifier
+                        .padding(20.dp)
+                        .size(70.dp)
+                        .clip(RoundedCornerShape(15.dp))
+                )
+                Text(
+                    modifier = Modifier.padding(20.dp),
+                    text =site.name,
+                    style = TextStyle(fontSize = 30.sp, color = Color(  0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                )
+
             }
-        .padding(10.dp)
-            .fillMaxWidth()
-            .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
-        verticalAlignment = Alignment.CenterVertically
-    ){
+        }
+    }
 
-       Image(
-           painter = painterResource(id = R.drawable.amazon),
-           contentDescription = "amazon logo",
-           modifier = Modifier.padding( 20.dp)
-               .size(70.dp)
-               .clip(RoundedCornerShape(15.dp))
-       )
-        Text(
 
-            modifier = Modifier.padding(20.dp),
-            text = "Amazon",
-            style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        )
 
     }
-    Row (
-        modifier = Modifier.padding(10.dp)
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.kilimall.co.ke"))
-                context.startActivity(intent)
-            }
-            .fillMaxWidth()
-            .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
-        verticalAlignment = Alignment.CenterVertically
-    ){
 
-        Image(
-            painter = painterResource(id = R.drawable.kilimall),
-            contentDescription = "amazon logo",
-            modifier = Modifier.padding( 20.dp)
-                .size(70.dp)
-                .clip(RoundedCornerShape(40.dp))
-        )
-        Text(
 
-            modifier = Modifier.padding(20.dp),
-            text = "Killimall",
-            style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        )
-
-    }
-    Row (
-        modifier = Modifier.padding(10.dp)
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.jiji.co.ke"))
-                context.startActivity(intent)
-            }
-            .fillMaxWidth()
-            .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp))
-            .fillMaxWidth(),
-        verticalAlignment = Alignment.CenterVertically
-    ){
-
-        Image(
-            painter = painterResource(id = R.drawable.jiji),
-            contentDescription = "amazon logo",
-            modifier = Modifier.padding( 20.dp)
-                .size(70.dp)
-                .clip(RoundedCornerShape(15.dp))
-        )
-        Text(
-
-            modifier = Modifier.padding(20.dp),
-            text = "Jiji",
-            style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        )
-
-    }
-    Row (
-        modifier = Modifier.padding(10.dp)
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.alibaba.com"))
-                context.startActivity(intent)
-            }
-            .fillMaxWidth()
-            .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
-        verticalAlignment = Alignment.CenterVertically
-    ){
-
-        Image(
-            painter = painterResource(id = R.drawable.alibaba),
-            contentDescription = "amazon logo",
-            modifier = Modifier.padding( 20.dp)
-                .size(70.dp)
-                .clip(RoundedCornerShape(15.dp))
-        )
-        Text(
-
-            modifier = Modifier.padding(20.dp),
-            text = "Alibaba",
-            style = TextStyle(fontSize = 30.sp, color = Color(0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        )
-
-    }
-    Row (
-        modifier = Modifier.padding(10.dp)
-            .clickable {
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ebay.com"))
-                context.startActivity(intent)
-            }
-            .fillMaxWidth()
-            .border(width =1.dp, color = Color.Black, shape = RoundedCornerShape(10.dp)),
-        verticalAlignment = Alignment.CenterVertically
-    ){
-
-        Image(
-            painter = painterResource(id = R.drawable.ebay),
-            contentDescription = "amazon logo",
-            modifier = Modifier.padding( 20.dp)
-                .size(70.dp)
-                .clip(RoundedCornerShape(15.dp))
-        )
-        Text(
-            modifier = Modifier.padding(20.dp),
-            text = "Ebay",
-            style = TextStyle(fontSize = 30.sp, color = Color(  0xff0091ea), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-        )
-
-    }
-    }
 

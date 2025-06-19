@@ -37,10 +37,10 @@ class MainActivity : ComponentActivity() {
                         Spacer(Modifier.height(20.dp))
                         Shops()
 //                        Fashion()
-                        Spacer(Modifier.height(20.dp))
+//                        Spacer(Modifier.height(20.dp))
                         GeneralShops()
 //                        Others()
-                        Spacer(Modifier.height(20.dp))
+//                        Spacer(Modifier.height(20.dp))
                         Dashboard()
 
 
